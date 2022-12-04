@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>ex3</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+	
+	<!-- 
+		<servlet-name> Servlet이름 </servlet-name>
+		<servlet-class>패키지부터 클래스까지 경로</servlet-class>
+		
+		<servlet-mapping>에서
+			<servlet-name> : <servlet>태그 안에 <serlvet-name>과 동일하게
+			<url-pattern> : / <-필수 ( java파일의 @WebServlet("/Init") 와 동일한 역할 )
+	 -->
+	<!-- 
+	
+	초기화 파라미터 실습
+	
+	<servlet>
+		<servlet-name>InitParam</servlet-name>
+		<servlet-class>com.javalec.ex3.InitParam</servlet-class>
+
+
+		<init-param>
+			<param-name>id</param-name>
+			<param-value>abcde</param-value>
+		</init-param>
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>12345</param-value>
+		</init-param>
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>InitParam</servlet-name>
+		<url-pattern>/IP</url-pattern>
+	</servlet-mapping>
+	-->
+	
+	<!-- 데이터 공유 실습(ServletContext)
+	
+	<context-param>
+		<param-name>id</param-name>
+		<param-value>abcd</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pw</param-name>
+		<param-value>1234</param-value>
+	</context-param>
+	 -->
+	 
+	 
+	 <listener>
+	 	<listener-class>com.javalec.ex3.ServletL</listener-class>
+	 </listener>
+</web-app>
